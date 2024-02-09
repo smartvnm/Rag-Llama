@@ -12,14 +12,15 @@ from llama_index.llms.llama_utils import (
 from llama_index import set_global_tokenizer
 from transformers import AutoTokenizer
 
-set_global_tokenizer(
-    AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf").encode
-)
 
 # use Huggingface embeddings
 from llama_index.embeddings import HuggingFaceEmbedding
 
 embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+
+set_global_tokenizer(
+    AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf").encode
+)
 
 llm = LlamaCPP(
     # You can pass in the URL to a GGML model to download it automatically
