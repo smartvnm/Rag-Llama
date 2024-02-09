@@ -6,3 +6,5 @@ llm = Llama(
   n_threads = 2,
   n_ctx = 2048,
 )
+response = llm.complete("Hello! Can you tell me a poem about cats and dogs?")
+print(response.text)
