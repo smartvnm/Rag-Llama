@@ -9,6 +9,12 @@ from llama_index.llms.llama_utils import (
     messages_to_prompt,
     completion_to_prompt,
 )
+from llama_index import set_global_tokenizer
+from transformers import AutoTokenizer
+
+set_global_tokenizer(
+    AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf").encode
+)
 
 llm = LlamaCPP(
     # You can pass in the URL to a GGML model to download it automatically
