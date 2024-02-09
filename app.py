@@ -48,6 +48,19 @@ service_context = ServiceContext.from_defaults(
 )
 
 
+# load documents
+documents = SimpleDirectoryReader(
+    "../../../examples/paul_graham_essay/data"
+).load_data()
+# create vector store index
+index = VectorStoreIndex.from_documents(
+    documents, service_context=service_context
+)
+# set up query engine
+query_engine = index.as_query_engine()
+response = query_engine.query("What did the author do growing up?")
+print(response)
+
 
 
 response = llm.complete("Hello! Can you tell me a poem about cats and dogs?")
