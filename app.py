@@ -42,5 +42,13 @@ llm = LlamaCPP(
     verbose=True,
 )
 
+service_context = ServiceContext.from_defaults(
+    llm=llm,
+    embed_model=embed_model,
+)
+
+
+
+
 response = llm.complete("Hello! Can you tell me a poem about cats and dogs?")
 print(response.text)
