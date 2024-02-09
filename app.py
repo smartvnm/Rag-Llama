@@ -1,5 +1,14 @@
 import streamlit as st
-from llama_cpp import Llama
+from llama_index import (
+    SimpleDirectoryReader,
+    VectorStoreIndex,
+    ServiceContext,
+)
+from llama_index.llms import LlamaCPP
+from llama_index.llms.llama_utils import (
+    messages_to_prompt,
+    completion_to_prompt,
+)
 
 llm = LlamaCPP(
     # You can pass in the URL to a GGML model to download it automatically
