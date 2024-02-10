@@ -12,3 +12,4 @@ with DDGS() as ddgs:
     )
     for r in ddgs_news_gen:
         print(r['title'])
+        print(r['url'])
