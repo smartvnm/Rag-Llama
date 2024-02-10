@@ -2,7 +2,7 @@ from duckduckgo_search import DDGS
 import shutil
 from trafilatura import fetch_url, extract
 
-shut
+shutil.rmtree('')
 with DDGS() as ddgs:
     keywords = 'artificial intelligence'
     ddgs_news_gen = ddgs.news(
