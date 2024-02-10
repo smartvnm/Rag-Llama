@@ -60,7 +60,7 @@ index = VectorStoreIndex.from_documents(
 
 # set up query engine
 query_engine = index.as_query_engine()
-response = query_engine.query("What did the author do growing up?")
+response = query_engine.query("Could you summarize the given context? Return your response which covers the key points of the text and does not miss anything important, please.")
 print(response)
 
 
