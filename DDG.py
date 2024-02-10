@@ -23,8 +23,9 @@ with DDGS() as ddgs:
         downloaded = fetch_url(url)
         if downloaded is not None:
           result = extract(downloaded)
-          print(title)
-          fname = title.replace('.',' ').replace(' ','_')
-          print(fname)
-          with(open('/content/docs/'+fname+'.txt','w')) as f:
-            f.write(result)
+          if result is not None:
+          
+            fname = title.replace('.',' ').replace(' ','_')
+            print(fname)
+            with(open('/content/docs/'+fname+'.txt','w')) as f:
+              f.write(result)
