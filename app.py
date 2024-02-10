@@ -28,9 +28,9 @@ llm = LlamaCPP(
     # optionally, you can set the path to a pre-downloaded model instead of model_url
     model_path="/content/models/LLaMA-2-7B-32K-Q6_K.gguf",
     temperature=0.1,
-    max_new_tokens=256,
+    max_new_tokens=1024,
     # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
-    context_window=4096,
+    context_window=30096,
     # kwargs to pass to __call__()
     generate_kwargs={},
     # kwargs to pass to __init__()
