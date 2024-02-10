@@ -1,4 +1,5 @@
 from duckduckgo_search import DDGS
+from trafilatura import fetch_url, extract
 
 with DDGS() as ddgs:
     keywords = 'artificial intelligence'
