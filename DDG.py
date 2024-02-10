@@ -15,7 +15,10 @@ with DDGS() as ddgs:
       max_results=20
     )
     for r in ddgs_news_gen:
-        title = r['title']
+        if r['title'] is not None:
+          title = r['title']
+        else: 
+          title = 'NoTitle'
         url = r['url']
         downloaded = fetch_url(url)
         if downloaded is not None:
