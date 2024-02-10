@@ -12,7 +12,7 @@ with DDGS() as ddgs:
       region="wt-wt",
       safesearch="off",
       timelimit="m",
-      max_results=20
+      max_results=5
     )
     for r in ddgs_news_gen:
         if r['title'] is not None:
