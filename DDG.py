@@ -18,8 +18,9 @@ with DDGS() as ddgs:
         title = r['title']
         url = r['url']
         downloaded = fetch_url(url)
-        result = extract(downloaded)
-        print(title)
-        print(result)
-        with(open('/content/docs/'+title+'.txt','w')) as f:
-          f.write(result)
+        if downloaded is not None:
+          result = extract(downloaded)
+          print(title)
+          print(result)
+          with(open('/content/docs/'+title+'.txt','w')) as f:
+            f.write(result)
