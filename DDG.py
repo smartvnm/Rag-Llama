@@ -1,8 +1,10 @@
 from duckduckgo_search import DDGS
 import shutil
+import os
 from trafilatura import fetch_url, extract
 
-shutil.rmtree('')
+shutil.rmtree('docs')
+os.mkdir('docs')
 with DDGS() as ddgs:
     keywords = 'artificial intelligence'
     ddgs_news_gen = ddgs.news(
