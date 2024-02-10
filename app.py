@@ -16,7 +16,7 @@ from transformers import AutoTokenizer
 # use Huggingface embeddings
 from llama_index.embeddings import HuggingFaceEmbedding
 
-embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-large-en-v1.5")
 
 set_global_tokenizer(
     AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf").encode
