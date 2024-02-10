@@ -48,15 +48,21 @@ service_context = ServiceContext.from_defaults(
 )
 
 
-# load documents
-documents = SimpleDirectoryReader(
-    "../../../examples/paul_graham_essay/data"
-).load_data()
 
 # create vector store index
+
+directory_path = '/content/docs'
+file_metadata = lambda x : {"filename": x}
+reader = SimpleDirectoryReader(directory_path, file_metadata=file_metadata)
+    
+documents = reader.load_data()
 index = VectorStoreIndex.from_documents(
     documents, service_context=service_context
 )
+print(type(documents))
+for d in documents:
+    index.insert(document = d, service_context = service_context)
+
 
 # set up query engine
 query_engine = index.as_query_engine()
