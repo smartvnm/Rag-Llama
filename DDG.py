@@ -1,7 +1,7 @@
 from duckduckgo_search import DDGS
 
 with DDGS() as ddgs:
-    keywords = 'holiday'
+    keywords = 'artificial intelligence'
     ddgs_news_gen = ddgs.news(
       keywords,
       region="wt-wt",
