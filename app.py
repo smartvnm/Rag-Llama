@@ -58,7 +58,7 @@ index = VectorStoreIndex.from_documents(
     documents, service_context=service_context
 )
 query_engine = index.as_query_engine()
-response = query_engine.query("Generate a blog article from given context. Answer the questions as detailed as possible, using the context and your knowledge")
+response = query_engine.query("Generate a detailed blog article from given context.")
 print(response)
 
 
