@@ -21,5 +21,5 @@ with DDGS() as ddgs:
         result = extract(downloaded)
         print(title)
         print(result)
-        with(open('/content/docs/title+'.txt','w')) as f:
+        with(open('/content/docs/'+title+'.txt','w')) as f:
           f.write(result)
