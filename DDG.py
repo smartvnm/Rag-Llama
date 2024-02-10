@@ -21,6 +21,6 @@ with DDGS() as ddgs:
         if downloaded is not None:
           result = extract(downloaded)
           print(title)
-          print(result)
+          
           with(open('/content/docs/'+title+'.txt','w')) as f:
             f.write(result)
