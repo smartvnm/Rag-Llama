@@ -2,7 +2,7 @@ from duckduckgo_search import DDGS
 import shutil
 import os
 from trafilatura import fetch_url, extract
-
+if os.path.exists('docs'):
 shutil.rmtree('docs')
 os.mkdir('docs')
 with DDGS() as ddgs:
