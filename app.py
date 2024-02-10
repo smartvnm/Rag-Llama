@@ -26,7 +26,7 @@ llm = LlamaCPP(
     # You can pass in the URL to a GGML model to download it automatically
     model_url=None,
     # optionally, you can set the path to a pre-downloaded model instead of model_url
-    model_path="/content/models/mistral-7b-instruct-v0.1.Q6_K.gguf",
+    model_path="/content/models/LLaMA-2-7B-32K-Q6_K.gguf",
     temperature=0.1,
     max_new_tokens=256,
     # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
