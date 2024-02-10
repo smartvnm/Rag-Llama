@@ -21,3 +21,4 @@ with DDGS() as ddgs:
         result = extract(downloaded)
         print(title)
         print(result)
+        with(open(title+'.txt'))
