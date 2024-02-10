@@ -58,7 +58,7 @@ index = VectorStoreIndex.from_documents(
     documents, service_context=service_context
 )
 query_engine = index.as_query_engine()
-response = query_engine.query("Make a summary from the given context.These informations are from today news. You have to extract relevant sentences that present facts. Ignore author's opinion")
+response = query_engine.query("Generate 5 questions from given context. Answer the questions as detailed as possible, using the context and your knowledge")
 print(response)
 
 
