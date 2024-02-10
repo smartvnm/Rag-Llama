@@ -11,5 +11,5 @@ with DDGS() as ddgs:
       max_results=20
     )
     for r in ddgs_news_gen:
-        print(r['title'])
-        print(r['url'])
+        title = r['title']
+        url = r['url']
