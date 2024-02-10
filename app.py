@@ -30,7 +30,7 @@ llm = LlamaCPP(
     temperature=0.1,
     max_new_tokens=256,
     # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
-    context_window=3900,
+    context_window=4096,
     # kwargs to pass to __call__()
     generate_kwargs={},
     # kwargs to pass to __init__()
