@@ -6,7 +6,7 @@ if os.path.exists('/content/docs'):
     shutil.rmtree('/content/docs')
 os.mkdir('/content/docs')
 with DDGS() as ddgs:
-    keywords = 'Ukraine'
+    keywords = 'generative ai'
     ddgs_news_gen = ddgs.news(
       keywords,
       region="wt-wt",
