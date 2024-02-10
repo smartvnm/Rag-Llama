@@ -15,4 +15,5 @@ with DDGS() as ddgs:
         url = r['url']
         downloaded = fetch_url(url)
         result = extract(downloaded)
+        print(title)
         print(result)
