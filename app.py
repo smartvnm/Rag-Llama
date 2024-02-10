@@ -53,22 +53,13 @@ service_context = ServiceContext.from_defaults(
 # create vector store index
 
 directory_path = '/content/docs'
-def get_file_metadata(filename):
-  return {"filename": filename}
-
-file_metadata = get_file_metadata
-reader = SimpleDirectoryReader(directory_path, file_metadata=file_metadata)
-    
-documents = reader.load_data()
-
-print(type(documents))
-for d in documents:
-    index = VectorStoreIndex.from_documents(
-    d, service_context=service_context
+documents = SimpleDirectoryReader(directory_path).load_data()
+index = VectorStoreIndex.from_documents(
+    documents, service_context=service_context
 )
-    query_engine = index.as_query_engine()
-    response = query_engine.query("Make a summary from the given context.These informations are from today news. You have to extract relevant sentences that present facts. Ignore author's opinion")
-    print(response)
+query_engine = index.as_query_engine()
+response = query_engine.query("Make a summary from the given context.These informations are from today news. You have to extract relevant sentences that present facts. Ignore author's opinion")
+print(response)
 
 
 
