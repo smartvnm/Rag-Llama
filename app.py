@@ -53,7 +53,6 @@ service_context = ServiceContext.from_defaults(
 
 directory_path = '/content/docs'
 def get_file_metadata(filename):
-  """Returns a dictionary with the filename as metadata."""
   return {"filename": filename}
 
 file_metadata = get_file_metadata
