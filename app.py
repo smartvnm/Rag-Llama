@@ -52,7 +52,11 @@ service_context = ServiceContext.from_defaults(
 # create vector store index
 
 directory_path = '/content/docs'
-file_metadata = lambda x : {"filename": x}
+def get_file_metadata(filename):
+  """Returns a dictionary with the filename as metadata."""
+  return {"filename": filename}
+
+file_metadata = get_file_metadata
 reader = SimpleDirectoryReader(directory_path, file_metadata=file_metadata)
     
 documents = reader.load_data()
