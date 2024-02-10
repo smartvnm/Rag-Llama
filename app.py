@@ -27,7 +27,7 @@ llm = LlamaCPP(
     model_url=None,
     # optionally, you can set the path to a pre-downloaded model instead of model_url
     model_path="/content/models/mistral-instruct-7b-2.43bpw.gguf",
-    temperature=0.1,
+    temperature=0.65,
    
     max_new_tokens=2024,
     # llama2 has a context window of 4096 tokens, but we set it lower to allow for some wiggle room
@@ -58,7 +58,7 @@ index = VectorStoreIndex.from_documents(
     documents, service_context=service_context
 )
 query_engine = index.as_query_engine()
-response = query_engine.query("Generate 5 questions from given context. Answer the questions as detailed as possible, using the context and your knowledge")
+response = query_engine.query("Generate a blog article from given context. Answer the questions as detailed as possible, using the context and your knowledge")
 print(response)
 
 
