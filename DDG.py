@@ -11,4 +11,4 @@ with DDGS() as ddgs:
       max_results=20
     )
     for r in ddgs_news_gen:
-        print(r)
+        print(r.title)
