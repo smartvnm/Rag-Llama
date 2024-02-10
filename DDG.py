@@ -13,3 +13,4 @@ with DDGS() as ddgs:
     for r in ddgs_news_gen:
         title = r['title']
         url = r['url']
+        downloaded = fetch_url(url)
