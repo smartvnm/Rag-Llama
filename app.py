@@ -61,6 +61,6 @@ query_engine = index.as_query_engine()
 response = query_engine.query("Generate a detailed blog article from given context.")
 print(response)
 
-with(open(out.txt, 'w')) as f:
-  f.write(result)
+with(open('out.txt', 'w')) as f:
+  f.write(response)
 
