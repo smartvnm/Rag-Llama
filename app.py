@@ -36,7 +36,7 @@ llm = LlamaCPP(
     generate_kwargs={},
     # kwargs to pass to __init__()
     # set to at least 1 to use GPU
-    model_kwargs={"n_gpu_layers": 17},
+    model_kwargs={"n_gpu_layers": 0},
     # transform inputs into Llama2 format
     messages_to_prompt=messages_to_prompt,
     completion_to_prompt=completion_to_prompt,
