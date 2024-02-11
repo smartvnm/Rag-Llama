@@ -36,7 +36,7 @@ llm = LlamaCPP(
     generate_kwargs={},
     # kwargs to pass to __init__()
     # set to at least 1 to use GPU
-    model_kwargs={"n_gpu_layers": 32},
+    model_kwargs={"n_gpu_layers": 17},
     # transform inputs into Llama2 format
     messages_to_prompt=messages_to_prompt,
     completion_to_prompt=completion_to_prompt,
@@ -61,5 +61,6 @@ query_engine = index.as_query_engine()
 response = query_engine.query("Generate a detailed blog article from given context.")
 print(response)
 
-
+with(open(out.txt, 'w')) as f:
+  f.write(result)
 
